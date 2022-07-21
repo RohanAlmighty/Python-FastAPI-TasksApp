@@ -25,9 +25,9 @@
                         <option {% if todo.priority==5 %} selected="selected" {% endif %}>5</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Edit your Task</button>
+                <button type="submit" class="btn btn-outline-info">Edit your Task</button>
                 <button onclick="window.location.href='/todos/delete/{{todo.id}}'" type="button"
-                    class="btn btn-danger">Delete</button>
+                    class="btn btn-outline-danger">Delete</button>
         </div>
     </div>
 </div>

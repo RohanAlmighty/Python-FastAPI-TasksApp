@@ -91,6 +91,11 @@ async def edit_todo(request: Request, todo_id: int, db: Session = Depends(get_db
 
     todo = db.query(models.Todos).filter(models.Todos.id == todo_id).first()
 
+    if todo.owner_id != user["id"]:
+        return RedirectResponse(
+            url="/auth/page-not-found", status_code=status.HTTP_302_FOUND
+        )
+
     return templates.TemplateResponse(
         "edit-todo.html", {"request": request, "todo": todo, "user": user}
     )
@@ -107,6 +112,7 @@ async def edit_todo_commit(
 ):
 
     user = await get_current_user(request)
+
     if user is None:
         return RedirectResponse(url="/auth", status_code=status.HTTP_302_FOUND)
 

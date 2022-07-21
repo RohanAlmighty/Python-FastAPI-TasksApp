@@ -123,6 +123,11 @@ async def authentication_page(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
 
 
+@router.get("/page-not-found", response_class=HTMLResponse)
+async def page_not_found(request: Request):
+    return templates.TemplateResponse("page-not-found.html", {"request": request})
+
+
 @router.post("/", response_class=HTMLResponse)
 async def login(request: Request, db: Session = Depends(get_db)):
     try:

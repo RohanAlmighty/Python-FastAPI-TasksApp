@@ -26,9 +26,9 @@
             <td>{{ todo.title }}</td>
             <td>
               <button onclick="window.location.href='complete/{{todo.id}}'" type="button"
-                class="btn btn-success">Complete</button>
+                class="btn btn-outline-success">Complete</button>
               <button onclick="window.location.href='edit-todo/{{todo.id}}'" type="button"
-                class="btn btn-info">Edit</button>
+                class="btn btn-outline-info">Edit</button>
             </td>
           </tr>
 
@@ -39,9 +39,9 @@
             <td class="strike-through-td">{{ todo.title }}</td>
             <td>
               <button onclick="window.location.href='complete/{{todo.id}}'" type="button"
-                class="btn btn-success">Undo</button>
+                class="btn btn-outline-success">Undo</button>
               <button onclick="window.location.href='edit-todo/{{todo.id}}'" type="button"
-                class="btn btn-info">Edit</button>
+                class="btn btn-outline-info">Edit</button>
             </td>
           </tr>
 
@@ -49,7 +49,7 @@
           {% endfor %}
         </tbody>
       </table>
-      <a class="btn btn-primary" href="add-todo">Add new Task</a>
+      <a class="btn btn-outline-warning" href="add-todo">Add new Task</a>
     </div>
   </div>
 </div>

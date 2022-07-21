@@ -1,20 +1,17 @@
 <div>
-    <nav class="navbar navbar-expand-md navbar-dark main-color fixed-top">
-        <a class="navbar-brand" href="#">Tasks App</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #8E44AD;">
+        <a class="navbar-brand" href="#">TasksApp by <i>RohanAlmighty</i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
             <span class="navbar-toggler-icon"></span>
+
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ui class="navbar-nav">
-                {% if user %}
-                <li class="nav-item active">
-                    <a class="nav-link" href="/"> Home </a>
-                </li>
-                {% endif %}
-            </ui>
             <ui class="navbar-nav ml-auto">
                 {% if user %}
+                <li class="nav-item m-1">
+                    <a type="button" class="btn btn-outline-light" href="/">Home</a>
+                </li>
                 <li class="nav-item m-1">
                     <a type="button" class="btn btn-outline-light" href="/users/edit-password">Change Password</a>
                 </li>
