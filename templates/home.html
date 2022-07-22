@@ -13,7 +13,8 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Info</th>
+            <th scope="col">Task</th>
+            <th scope="col">Priority</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
@@ -24,9 +25,16 @@
           <tr class="pointer">
             <td>{{ loop.index }}</td>
             <td>{{ todo.title }}</td>
+            {% if todo.priority == 5 %}
+            <td style="color: #c30000;">{{ todo.priority }}</td>
+            {% elif (todo.priority >= 3 and todo.priority <= 4) %}
+            <td style="color: #c39600;">{{ todo.priority }}</td>
+            {% else %}
+            <td style="color: #01a201;">{{ todo.priority }}</td>
+            {% endif %}
             <td>
               <button onclick="window.location.href='complete/{{todo.id}}'" type="button"
-                class="btn btn-outline-success">Complete</button>
+                class="btn btn-outline-success">Done</button>
               <button onclick="window.location.href='edit-todo/{{todo.id}}'" type="button"
                 class="btn btn-outline-info">Edit</button>
             </td>
@@ -37,6 +45,13 @@
           <tr class="pointer alert alert-success">
             <td>{{ loop.index }}</td>
             <td class="strike-through-td">{{ todo.title }}</td>
+            {% if todo.priority == 5 %}
+            <td style="color: #c30000;">{{ todo.priority }}</td>
+            {% elif (todo.priority >= 3 and todo.priority <= 4) %}
+            <td style="color: #c39600;">{{ todo.priority }}</td>
+            {% else %}
+            <td style="color: #01a201;">{{ todo.priority }}</td>
+            {% endif %}
             <td>
               <button onclick="window.location.href='complete/{{todo.id}}'" type="button"
                 class="btn btn-outline-success">Undo</button>

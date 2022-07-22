@@ -1,6 +1,6 @@
 <div>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #8E44AD;">
-        <a class="navbar-brand" href="#">TasksApp by <i>RohanAlmighty</i></a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #8d5de0;">
+        <a class="navbar-brand" href="#">TasksApp <span style="font-size: 10px;">by <i>RohanAlmighty</i></span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,14 +9,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ui class="navbar-nav ml-auto">
                 {% if user %}
-                <li class="nav-item m-1">
-                    <a type="button" class="btn btn-outline-light" href="/">Home</a>
+                <li class="nav-item active m-1">
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item m-1">
-                    <a type="button" class="btn btn-outline-light" href="/users/edit-password">Change Password</a>
+                    <a class="nav-link" href="/users/edit-password">Change Password</a>
                 </li>
                 <li class="nav-item m-1">
-                    <a type="button" class="btn btn-outline-light" href="/auth/logout">Logout</a>
+                    <a class="nav-link" href="/auth/logout">Logout</a>
                 </li>
                 {% endif %}
             </ui>
