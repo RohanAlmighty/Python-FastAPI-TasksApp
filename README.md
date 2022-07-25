@@ -1,7 +1,7 @@
 
 # Python FastAPI Tasks App
 
-Python app bulit using FastAPI to manage Tasks by creating user accounts.
+Python app developed using FastAPI to manage Tasks by creating user accounts.
 
 Go to -> https://rohanalmighty-fastapi-tasksapp.herokuapp.com/
 ## Screenshots
