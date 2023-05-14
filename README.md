@@ -3,7 +3,7 @@
 
 Python app developed using FastAPI to manage Tasks by creating user accounts.
 
-Go to -> https://rohanalmighty-fastapi-tasksapp.herokuapp.com/
+Go to -> https://python-fastapi-tasksapp.onrender.com/todos/
 ## Screenshots
 
 ![App Screenshot](https://user-images.githubusercontent.com/46628806/180803480-aaa5006d-b044-4d2b-bad2-ee611c50d7c5.png)
